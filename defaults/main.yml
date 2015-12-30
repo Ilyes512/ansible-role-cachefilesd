@@ -1,5 +1,4 @@
 ---
 ansidev_package_state: present
 
-cachefilesd_enabled: true
 cachefilesd_package_state: "{{ ansidev_package_state }}"
