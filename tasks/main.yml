@@ -10,5 +10,5 @@
 - name: Cachefilesd | Enable cachefilesd
   sudo: true
   template:
-    src: cachefilesd.tpl
+    src: cachefilesd.j2
     dest: /etc/default/cachefilesd
