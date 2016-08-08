@@ -1,14 +1,14 @@
 ---
-- name: Cachefilesd | Installing cachefilesd
-  sudo: yes
+- name: Installing cachefilesd
+  become: yes
   apt:
     pkg: cachefilesd
     state: "{{ cachefilesd_package_state }}"
     update_cache: yes
     cache_valid_time: 3600
 
-- name: Cachefilesd | Enable cachefilesd
-  sudo: true
+- name: Enable cachefilesd
+  become: true
   template:
     src: cachefilesd.j2
     dest: /etc/default/cachefilesd
